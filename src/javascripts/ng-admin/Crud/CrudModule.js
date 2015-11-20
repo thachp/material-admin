@@ -1,4 +1,4 @@
-var angular = require('angular');
+import angular from 'angular';
 
 var CrudModule = angular.module('crud', [
     'ui.router', 'ui.bootstrap', 'ngSanitize', 'textAngular', 'ngInflection', 'ui.codemirror', 'ngFileUpload', 'ngNumeraljs'
@@ -60,6 +60,7 @@ CrudModule.directive('maJsonColumn', require('./column/maJsonColumn'));
 CrudModule.directive('maNumberColumn', require('./column/maNumberColumn'));
 CrudModule.directive('maReferenceColumn', require('./column/maReferenceColumn'));
 CrudModule.directive('maReferencedListColumn', require('./column/maReferencedListColumn'));
+CrudModule.directive('maReferenceLinkColumn', require('./column/maReferenceLinkColumn'));
 CrudModule.directive('maReferenceManyColumn', require('./column/maReferenceManyColumn'));
 CrudModule.directive('maReferenceManyLinkColumn', require('./column/maReferenceManyLinkColumn'));
 CrudModule.directive('maStringColumn', require('./column/maStringColumn'));
@@ -77,6 +78,7 @@ CrudModule.directive('maBatchDeleteButton', require('./button/maBatchDeleteButto
 CrudModule.directive('maExportToCsvButton', require('./button/maExportToCsvButton'));
 CrudModule.directive('maViewBatchActions', require('./button/maViewBatchActions'));
 
+CrudModule.directive('maShowItem', require('./show/maShowItem'));
 CrudModule.directive('maViewActions', require('./misc/ViewActions'));
 CrudModule.directive('compile', require('./misc/Compile'));
 
@@ -98,4 +100,8 @@ CrudModule.factory('progression', function () {
     return require('nprogress');
 });
 
-module.exports = CrudModule;
+CrudModule.run(['Restangular', 'NgAdminConfiguration', function(Restangular, NgAdminConfiguration) {
+    Restangular.setBaseUrl(NgAdminConfiguration().baseApiUrl());
+}]);
+
+export default CrudModule;

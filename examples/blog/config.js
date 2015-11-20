@@ -1,4 +1,21 @@
 /*global angular*/
+
+/*
+ * This is an example ng-admin configuration for a blog administration composed
+ * of three entities: post, comment, and tag. Reading the code and the comments
+ * will help you understand how a typical ng-admin application works. You can
+ * browse the result online at http://ng-admin.marmelab.com.
+ *
+ * The remote REST API is simulated in the browser, using FakeRest
+ * (https://github.com/marmelab/FakeRest). Look at the JSON responses in the
+ * browser console to see the data used by ng-admin.
+ *
+ * For simplicity's sake, the entire configuration is written in a single file,
+ * but in a real world situation, you would probably split that configuration
+ * into one file per entity. For another example configuration on a larger set
+ * of entities, and using the best development practices, check out the
+ * Posters Galore demo (http://marmelab.com/ng-admin-demo/).
+ */
 (function () {
     "use strict";
 
@@ -85,6 +102,10 @@
             .addEntity(comment);
 
         // customize entities and views
+
+        /*****************************
+         * post entity customization *
+         *****************************/
         post.listView()
             .title('All posts') // default title is "[Entity_name] list"
             .description('List of posts with infinite pagination') // description appears under the title
@@ -114,7 +135,10 @@
                 ]).label('Category'),
                 nga.field('subcategory', 'choice').choices(subCategories).label('Subcategory')
             ])
-            .listActions(['show', 'edit', 'delete']);
+            .listActions(['show', 'edit', 'delete'])
+            .entryCssClasses(function(entry) { // set row class according to entry
+                return (entry.views > 300) ? 'is-popular' : '';
+            });
 
         post.creationView()
             .fields([
@@ -141,7 +165,8 @@
                         return subCategories.filter(function (c) {
                             return c.category === entry.values.category;
                         });
-                    }),
+                    })
+                    .template('<ma-field ng-if="entry.values.category" field="::field" value="entry.values[field.name()]" entry="entry" entity="::entity" form="formController.form" datastore="::formController.dataStore"></ma-field>', true),
                 nga.field('tags', 'reference_many') // ReferenceMany translates to a select multiple
                     .targetEntity(tag)
                     .targetField(nga.field('name'))
@@ -220,7 +245,9 @@
                     .template('<send-email post="entry"></send-email>')
             ]);
 
-
+        /********************************
+         * comment entity customization *
+         ********************************/
         comment.listView()
             .title('Comments')
             .perPage(10) // limit the number of elements displayed per page. Default is 30.
@@ -292,14 +319,16 @@
         comment.deletionView()
             .title('Deletion confirmation'); // customize the deletion confirmation message
 
-
+        /****************************
+         * tag entity customization *
+         ****************************/
         tag.listView()
             .infinitePagination(false) // by default, the list view uses infinite pagination. Set to false to use regulat pagination
             .fields([
                 nga.field('id').label('ID'),
                 nga.field('name'),
                 nga.field('published', 'boolean').cssClasses(function(entry) { // add custom CSS classes to inputs and columns
-                    if(entry && entry.values){
+                    if (entry && entry.values){
                         if (entry.values.published) {
                             return 'bg-success text-center';
                         }
@@ -309,7 +338,8 @@
                 nga.field('custom')
                     .label('Upper name')
                     .template('{{ entry.values.name.toUpperCase() }}')
-                    .cssClasses('hidden-xs')
+                    .cssClasses('hidden-xs'),
+                nga.field('nb_posts')
             ])
             .filters([
                 nga.field('published')
@@ -319,6 +349,26 @@
             ])
             .batchActions([]) // disable checkbox column and batch delete
             .listActions(['show', 'edit']);
+
+        // define custom controller logic for the tag listView
+        tag.listView().prepare(['Restangular', 'entries', function(Restangular, entries) {
+            // fetch the number of posts for each tag
+            return Restangular.allUrl('posts').getList()
+                .then(function(response) {
+                    const nbPostsByTag = {};
+                    response.data.forEach(function(post) {
+                        post.tags.forEach(function(tagId) {
+                            if (!nbPostsByTag[tagId]) {
+                                nbPostsByTag[tagId] = 0;
+                            }
+                            nbPostsByTag[tagId]++;
+                        });
+                    });
+                    entries.map(function(tag) {
+                        tag.values.nb_posts = nbPostsByTag[tag.identifierValue];
+                    });
+                });
+        }]);
 
         tag.editionView()
             .fields([

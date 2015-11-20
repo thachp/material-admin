@@ -3,7 +3,7 @@
  *
  * @example <ma-choices-field entry="entry" field="field" value="value"></ma-choices-field>
  */
-function maChoicesField($compile) {
+export default function maChoicesField($compile) {
     'use strict';
 
     return {
@@ -23,9 +23,11 @@ function maChoicesField($compile) {
                     scope.v = field.validation();
 
                     var refreshAttributes = '';
+                    var itemsFilter = '| filter: {label: $select.search}';
                     if (field.type().indexOf('reference') === 0 && field.remoteComplete()) {
                         scope.refreshDelay = field.remoteCompleteOptions().refreshDelay;
                         refreshAttributes = 'refresh-delay="refreshDelay" refresh="refresh({ $search: $select.search })"';
+                        itemsFilter = '';
                     }
 
                     var choices = field.choices ? field.choices() : [];
@@ -35,7 +37,7 @@ function maChoicesField($compile) {
                     var template = `
                         <ui-select ${scope.v.required ? 'ui-select-required' : ''} multiple ng-model="$parent.value" ng-required="v.required" id="{{ name }}" name="{{ name }}">
                             <ui-select-match placeholder="{{ placeholder }}">{{ $item.label }}</ui-select-match>
-                            <ui-select-choices ${refreshAttributes} repeat="item.value as item in choices | filter: {label: $select.search}">
+                            <ui-select-choices ${refreshAttributes} repeat="item.value as item in choices ${itemsFilter}">
                                 {{ item.label }}
                             </ui-select-choices>
                         </ui-select>`;
@@ -63,5 +65,3 @@ function maChoicesField($compile) {
 }
 
 maChoicesField.$inject = ['$compile'];
-
-module.exports = maChoicesField;

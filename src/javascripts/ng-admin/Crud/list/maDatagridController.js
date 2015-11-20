@@ -1,18 +1,5 @@
-/*global define*/
-
-define(function () {
-    'use strict';
-
-    /**
-     *
-     * @param {$scope} $scope
-     * @param {$location} $location
-     * @param {$stateParams} $stateParams
-     * @param {$anchorScroll} $anchorScroll
-     *
-     * @constructor
-     */
-    function DatagridController($scope, $location, $stateParams, $anchorScroll, $attrs) {
+export default class DatagridController {
+    constructor($scope, $location, $stateParams, $anchorScroll, $attrs) {
         $scope.entity = $scope.entity();
         this.$scope = $scope;
         this.$location = $location;
@@ -20,6 +7,7 @@ define(function () {
         this.datastore = this.$scope.datastore();
         this.filters = {};
         this.shouldDisplayActions = this.$scope.listActions() && this.$scope.listActions().length > 0;
+        $scope.getEntryCssClasses = this.getEntryCssClasses.bind(this);
         $scope.toggleSelect = this.toggleSelect.bind(this);
         $scope.toggleSelectAll = this.toggleSelectAll.bind(this);
         $scope.sortField = $attrs.sortField;
@@ -38,9 +26,9 @@ define(function () {
      *
      * @returns {Boolean}
      */
-    DatagridController.prototype.isSorting = function (field) {
+    isSorting(field) {
         return this.sortField === this.getSortName(field);
-    };
+    }
 
     /**
      * Return 'even'|'odd' based on the index parameter
@@ -48,15 +36,15 @@ define(function () {
      * @param {Number} index
      * @returns {string}
      */
-    DatagridController.prototype.itemClass = function (index) {
+    itemClass(index) {
         return (index % 2 === 0) ? 'even' : 'odd';
-    };
+    }
 
     /**
      *
      * @param {Field} field
      */
-    DatagridController.prototype.sort = function (field) {
+    sort(field) {
         var dir = 'ASC',
             fieldName = this.getSortName(field);
 
@@ -66,7 +54,7 @@ define(function () {
 
         this.$location.search('sortField', fieldName);
         this.$location.search('sortDir', dir);
-    };
+    }
 
     /**
      * Return fieldName like (view.fieldName) to sort
@@ -75,11 +63,23 @@ define(function () {
      *
      * @returns {String}
      */
-    DatagridController.prototype.getSortName = function (field) {
+    getSortName(field) {
         return this.$scope.name ? this.$scope.name + '.' + field.name() : field.name();
-    };
+    }
 
-    DatagridController.prototype.toggleSelect = function (entry) {
+    getEntryCssClasses(entry) {
+        var entryCssClasses = this.$scope.entryCssClasses;
+        if (typeof entryCssClasses !== 'function') {
+            return;
+        }
+        var getEntryCssClasses = entryCssClasses();
+        if (typeof getEntryCssClasses !== 'function') {
+            return;
+        }
+        return getEntryCssClasses(entry.values);
+    }
+
+    toggleSelect(entry) {
         var selection = this.$scope.selection.slice();
 
         var index = selection.indexOf(entry);
@@ -90,9 +90,9 @@ define(function () {
         }
         selection.splice(index, 1);
         this.$scope.selection = selection;
-    };
+    }
 
-    DatagridController.prototype.toggleSelectAll = function () {
+    toggleSelectAll() {
 
         if (this.$scope.selection.length < this.$scope.entries.length) {
             this.$scope.selection = this.$scope.entries;
@@ -100,9 +100,7 @@ define(function () {
         }
 
         this.$scope.selection = [];
-    };
+    }
+}
 
-    DatagridController.$inject = ['$scope', '$location', '$stateParams', '$anchorScroll', '$attrs'];
-
-    return DatagridController;
-});
+DatagridController.$inject = ['$scope', '$location', '$stateParams', '$anchorScroll', '$attrs'];

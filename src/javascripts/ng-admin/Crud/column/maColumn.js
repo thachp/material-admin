@@ -1,4 +1,4 @@
-function maColumn($state, $anchorScroll, $compile, Configuration, FieldViewConfiguration) {
+export default function maColumn($state, $anchorScroll, $compile, Configuration, FieldViewConfiguration) {
 
     function getDetailLinkRouteName(field, entity) {
         if (entity.isReadOnly) {
@@ -36,10 +36,12 @@ function maColumn($state, $anchorScroll, $compile, Configuration, FieldViewConfi
             scope.datastore = scope.datastore();
             scope.field = scope.field();
             scope.entry = scope.entry();
-            scope.value = scope.entry.values[scope.field.name()];
+            scope.value = typeof scope.entry === 'undefined'
+                ? ''
+                : scope.entry.values[scope.field.name()];
             scope.entity = scope.entity();
             let customTemplate = scope.field.getTemplateValue(scope.entry);
-            if (customTemplate) {
+            if (customTemplate && !scope.field.templateIncludesLabel()) {
                 element.append(customTemplate);
             } else {
                 let type = scope.field.type();
@@ -49,29 +51,15 @@ function maColumn($state, $anchorScroll, $compile, Configuration, FieldViewConfi
                     element.append(FieldViewConfiguration[type].getReadWidget());
                 }
             }
+            scope.detailState = getDetailLinkRouteName(scope.field, scope.entity);
+            scope.detailStateParams = {
+                ...$state.params,
+                entity: scope.entry.entityName,
+                id: scope.entry.identifierValue,
+            };
             $compile(element.contents())(scope);
-            scope.gotoDetail = function () {
-                var route = getDetailLinkRouteName(scope.field, scope.entity);
-                $state.go($state.get(route),
-                angular.extend({}, $state.params, {
-                    entity: scope.entry.entityName,
-                    id: scope.entry.identifierValue
-                }));
-            };
-            scope.gotoReference = function () {
-                var referenceEntity = scope.field.targetEntity().name();
-                var relatedEntity = Configuration().getEntity(referenceEntity);
-                var referenceId = scope.entry.values[scope.field.name()];
-                var route = getDetailLinkRouteName(scope.field, relatedEntity);
-                $state.go($state.get(route), {
-                    entity: referenceEntity,
-                    id: referenceId
-                });
-            };
         }
     };
 }
 
 maColumn.$inject = ['$state', '$anchorScroll', '$compile', 'NgAdminConfiguration', 'FieldViewConfiguration'];
-
-module.exports = maColumn;

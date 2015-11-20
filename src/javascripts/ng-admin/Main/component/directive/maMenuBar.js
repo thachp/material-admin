@@ -1,7 +1,7 @@
-var menuBarView = require('../../view/menuBar.html');
-var angular = require('angular');
+import menuBarView from '../../view/menuBar.html';
+import angular from 'angular';
 
-function maMenuBar($location, $rootScope, $compile) {
+export default function maMenuBar($location, $rootScope, $compile) {
     return {
         restrict: 'E',
         scope: {
@@ -39,7 +39,7 @@ function maMenuBar($location, $rootScope, $compile) {
                 // we don't render() in that case because it would cut the animation
                 return;
             }
-            scope.gotoLink = function (menu) {
+            scope.activateLink = function (menu) {
                 if (!menu.link()) {
                     return;
                 }
@@ -50,7 +50,6 @@ function maMenuBar($location, $rootScope, $compile) {
                 if (menu.autoClose()) {
                     openMenus = [];
                 }
-                $location.url(menu.link());
             };
             scope.isOpen = function(menu) {
                 return menu.isChildActive(scope.path) || openMenus.indexOf(menu) !== -1;
@@ -91,5 +90,3 @@ function maMenuBar($location, $rootScope, $compile) {
 }
 
 maMenuBar.$inject = ['$location', '$rootScope', '$compile'];
-
-module.exports = maMenuBar;

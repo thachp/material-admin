@@ -1,28 +1,24 @@
-/*global define*/
+import maDatagridController from './maDatagridController';
 
-define(function (require) {
-    'use strict';
-
-    var maDatagridController = require('./maDatagridController');
-
-    function maDatagridDirective() {
-        return {
-            restrict: 'E',
-            scope: {
-                name: '@',
-                entries: '=',
-                selection: '=',
-                fields: '&',
-                listActions: '&',
-                entity: '&',
-                datastore: '&',
-                sortField: '@',
-                sortDir: '@',
-                sort: '&'
-            },
-            controllerAs: 'datagrid',
-            controller: maDatagridController,
-            template:
+export default function maDatagrid() {
+    return {
+        restrict: 'E',
+        scope: {
+            name: '@',
+            entries: '=',
+            selection: '=',
+            fields: '&',
+            listActions: '&',
+            entity: '&',
+            entryCssClasses: '&?',
+            datastore: '&',
+            sortField: '@',
+            sortDir: '@',
+            sort: '&'
+        },
+        controllerAs: 'datagrid',
+        controller: maDatagridController,
+        template:
 `<table class="grid table table-condensed table-hover table-striped">
     <thead>
         <tr>
@@ -43,7 +39,7 @@ define(function (require) {
     </thead>
 
     <tbody>
-        <tr ng-repeat="entry in entries track by entry.identifierValue">
+        <tr ng-repeat="entry in entries track by entry.identifierValue" ng-class="getEntryCssClasses(entry)">
             <td ng-if="selection">
                 <ma-datagrid-item-selector toggle-select="toggleSelect(entry)" selection="selection" entry="entry"/>
             </td>
@@ -56,10 +52,7 @@ define(function (require) {
         </tr>
     </tbody>
 </table>`
-        };
-    }
+    };
+}
 
-    maDatagridDirective.$inject = [];
-
-    return maDatagridDirective;
-});
+maDatagrid.$inject = [];
