@@ -1,5 +1,5 @@
 <div id="wrapper">
-    <nav id="header-nav" role="navigation">
+    <nav id="header-nav" role="navigation" ng-if="::appController.displayNavigation">
         <span compile="::appController.header">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" ng-click="isCollapsed = !isCollapsed">
@@ -10,7 +10,6 @@
             <a href="#" ng-click="appController.displayHome()" class="navbar-brand">{{ ::appController.applicationName }}</a>
         </div>
         </span>
-
         <ma-menu-bar menu="::appController.menu"></ma-menu-bar>
     </nav>
 

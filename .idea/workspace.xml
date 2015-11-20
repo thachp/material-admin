@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7821728b-74b8-4520-ae48-e01cf1b7ffd6" name="Default" comment="" />
+    <list default="true" id="7821728b-74b8-4520-ae48-e01cf1b7ffd6" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/blog/build/fakerest.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/blog/config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/blog/data.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/blog/fakerest-init.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/blog/index.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javascripts/ng-admin/Main/view/layout.html" afterPath="$PROJECT_DIR$/src/javascripts/ng-admin/Main/view/layout.html" />
+    </list>
     <ignored path="ng-admin.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -22,59 +31,53 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ng-admin.min.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build/ng-admin.min.js">
+      <file leaf-file-name="MainModule.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/javascripts/ng-admin/Main/MainModule.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/javascripts/ng-admin/Main/component/controller/AppController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DashboardController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/javascripts/ng-admin/Main/component/controller/DashboardController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="10" selection-start-line="17" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
-                <marker date="1447980600000" expanded="true" signature="491:916396" placeholder="[...]" />
-                <marker date="1447980600000" expanded="true" signature="795708:916396" placeholder="{...}" />
-                <marker date="1447980600000" expanded="true" signature="795723:916396" placeholder="{...}" />
-                <marker date="1447980600000" expanded="true" signature="811968:916396" placeholder="{...}" />
-                <marker date="1447980600000" expanded="true" signature="828930:916396" placeholder="[...]" />
-                <marker date="1447980600000" expanded="true" signature="829170:916396" placeholder="{...}" />
-                <marker date="1447980600000" expanded="true" signature="829177:916396" placeholder="{&quot;priority&quot;: 2...}" />
-                <marker date="1447980600000" expanded="true" signature="829249:916396" placeholder="{...}" />
-                <marker date="1447980600000" expanded="true" signature="833478:916396" placeholder="{...}" />
-                <marker date="1447980600000" expanded="true" signature="833502:916396" placeholder="{...}" />
-                <marker date="1447980600000" expanded="true" signature="833525:916396" placeholder="{...}" />
-                <marker date="1447980600000" expanded="true" signature="836839:916396" placeholder="&lt;xml/&gt;" />
-                <marker date="1447980600000" expanded="true" signature="836864:916396" placeholder="&lt;xml/&gt;" />
-                <marker date="1447980600000" expanded="true" signature="836876:916396" placeholder="&lt;xml/&gt;" />
-                <marker date="1447980600000" expanded="true" signature="836890:916396" placeholder="&lt;xml/&gt;" />
-                <marker date="1447980600000" expanded="true" signature="836932:916396" placeholder="&lt;xml/&gt;" />
-                <marker date="1447980600000" expanded="true" signature="836945:916396" placeholder="&lt;xml/&gt;" />
+                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webpack.config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="51" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="21" selection-start-line="13" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Makefile" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Makefile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Makefile">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3270142">
+            <state vertical-scroll-proportion="0.0">
               <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="maBackButton.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/javascripts/ng-admin/Crud/button/maBackButton.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -83,17 +86,50 @@
       <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/javascripts/ng-admin/Main/view/dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-18.125">
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="layout.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/javascripts/ng-admin/Main/view/layout.html">
           <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.29097962">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="maMenuBar.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/javascripts/ng-admin/Main/component/directive/maMenuBar.js">
+          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
+              <caret line="33" column="24" selection-start-line="33" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="maDashboardPanel.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/javascripts/ng-admin/Main/component/directive/maDashboardPanel.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="20" column="27" selection-start-line="20" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding>
+                <marker date="1447980600000" expanded="true" signature="421:519" placeholder="..." />
+                <marker date="1447980600000" expanded="true" signature="566:753" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menuBar.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/javascripts/ng-admin/Main/view/menuBar.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.125">
               <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
@@ -196,11 +232,153 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="examples" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="blog" />
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ng-admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ng-admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ng-admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ng-admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ng-admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ng-admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ng-admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ng-admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ng-admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="component" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ng-admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ng-admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ng-admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="component" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="directive" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ng-admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ng-admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ng-admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -314,25 +492,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1447980600000" expanded="true" signature="491:916396" placeholder="[...]" />
-            <marker date="1447980600000" expanded="true" signature="795708:916396" placeholder="{...}" />
-            <marker date="1447980600000" expanded="true" signature="795723:916396" placeholder="{...}" />
-            <marker date="1447980600000" expanded="true" signature="811968:916396" placeholder="{...}" />
-            <marker date="1447980600000" expanded="true" signature="828930:916396" placeholder="[...]" />
-            <marker date="1447980600000" expanded="true" signature="829170:916396" placeholder="{...}" />
-            <marker date="1447980600000" expanded="true" signature="829177:916396" placeholder="{&quot;priority&quot;: 2...}" />
-            <marker date="1447980600000" expanded="true" signature="829249:916396" placeholder="{...}" />
-            <marker date="1447980600000" expanded="true" signature="833478:916396" placeholder="{...}" />
-            <marker date="1447980600000" expanded="true" signature="833502:916396" placeholder="{...}" />
-            <marker date="1447980600000" expanded="true" signature="833525:916396" placeholder="{...}" />
-            <marker date="1447980600000" expanded="true" signature="836839:916396" placeholder="&lt;xml/&gt;" />
-            <marker date="1447980600000" expanded="true" signature="836864:916396" placeholder="&lt;xml/&gt;" />
-            <marker date="1447980600000" expanded="true" signature="836876:916396" placeholder="&lt;xml/&gt;" />
-            <marker date="1447980600000" expanded="true" signature="836890:916396" placeholder="&lt;xml/&gt;" />
-            <marker date="1447980600000" expanded="true" signature="836932:916396" placeholder="&lt;xml/&gt;" />
-            <marker date="1447980600000" expanded="true" signature="836945:916396" placeholder="&lt;xml/&gt;" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -380,25 +540,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1447980600000" expanded="true" signature="491:916396" placeholder="[...]" />
-            <marker date="1447980600000" expanded="true" signature="795708:916396" placeholder="{...}" />
-            <marker date="1447980600000" expanded="true" signature="795723:916396" placeholder="{...}" />
-            <marker date="1447980600000" expanded="true" signature="811968:916396" placeholder="{...}" />
-            <marker date="1447980600000" expanded="true" signature="828930:916396" placeholder="[...]" />
-            <marker date="1447980600000" expanded="true" signature="829170:916396" placeholder="{...}" />
-            <marker date="1447980600000" expanded="true" signature="829177:916396" placeholder="{&quot;priority&quot;: 2...}" />
-            <marker date="1447980600000" expanded="true" signature="829249:916396" placeholder="{...}" />
-            <marker date="1447980600000" expanded="true" signature="833478:916396" placeholder="{...}" />
-            <marker date="1447980600000" expanded="true" signature="833502:916396" placeholder="{...}" />
-            <marker date="1447980600000" expanded="true" signature="833525:916396" placeholder="{...}" />
-            <marker date="1447980600000" expanded="true" signature="836839:916396" placeholder="&lt;xml/&gt;" />
-            <marker date="1447980600000" expanded="true" signature="836864:916396" placeholder="&lt;xml/&gt;" />
-            <marker date="1447980600000" expanded="true" signature="836876:916396" placeholder="&lt;xml/&gt;" />
-            <marker date="1447980600000" expanded="true" signature="836890:916396" placeholder="&lt;xml/&gt;" />
-            <marker date="1447980600000" expanded="true" signature="836932:916396" placeholder="&lt;xml/&gt;" />
-            <marker date="1447980600000" expanded="true" signature="836945:916396" placeholder="&lt;xml/&gt;" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -432,21 +574,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/javascripts/ng-admin/Main/MainModule.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/javascripts/ng-admin/Main/config/http.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javascripts/ng-admin/Main/component/controller/AppController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -457,25 +585,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1447980600000" expanded="true" signature="491:916396" placeholder="[...]" />
-            <marker date="1447980600000" expanded="true" signature="795708:916396" placeholder="{...}" />
-            <marker date="1447980600000" expanded="true" signature="795723:916396" placeholder="{...}" />
-            <marker date="1447980600000" expanded="true" signature="811968:916396" placeholder="{...}" />
-            <marker date="1447980600000" expanded="true" signature="828930:916396" placeholder="[...]" />
-            <marker date="1447980600000" expanded="true" signature="829170:916396" placeholder="{...}" />
-            <marker date="1447980600000" expanded="true" signature="829177:916396" placeholder="{&quot;priority&quot;: 2...}" />
-            <marker date="1447980600000" expanded="true" signature="829249:916396" placeholder="{...}" />
-            <marker date="1447980600000" expanded="true" signature="833478:916396" placeholder="{...}" />
-            <marker date="1447980600000" expanded="true" signature="833502:916396" placeholder="{...}" />
-            <marker date="1447980600000" expanded="true" signature="833525:916396" placeholder="{...}" />
-            <marker date="1447980600000" expanded="true" signature="836839:916396" placeholder="&lt;xml/&gt;" />
-            <marker date="1447980600000" expanded="true" signature="836864:916396" placeholder="&lt;xml/&gt;" />
-            <marker date="1447980600000" expanded="true" signature="836876:916396" placeholder="&lt;xml/&gt;" />
-            <marker date="1447980600000" expanded="true" signature="836890:916396" placeholder="&lt;xml/&gt;" />
-            <marker date="1447980600000" expanded="true" signature="836932:916396" placeholder="&lt;xml/&gt;" />
-            <marker date="1447980600000" expanded="true" signature="836945:916396" placeholder="&lt;xml/&gt;" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -495,7 +605,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/javascripts/ng-admin/Main/view/dashboard.html">
+    <entry file="file://$PROJECT_DIR$/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javascripts/ng-admin/Crud/button/maBackButton.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -503,18 +621,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/javascripts/ng-admin/Main/view/layout.html">
+    <entry file="file://$PROJECT_DIR$/src/javascripts/ng-admin/Main/component/controller/AppController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javascripts/ng-admin/Main/component/controller/DashboardController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="10" selection-start-line="17" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javascripts/ng-admin/Main/component/directive/maMenuBar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="24" selection-start-line="33" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javascripts/ng-admin/Main/component/directive/maDashboardPanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="27" selection-start-line="20" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <marker date="1447980600000" expanded="true" signature="421:519" placeholder="..." />
+            <marker date="1447980600000" expanded="true" signature="566:753" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javascripts/ng-admin/Main/view/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.125">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javascripts/ng-admin/Main/MainModule.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javascripts/ng-admin/Main/view/menuBar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.125">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Makefile">
+    <entry file="file://$PROJECT_DIR$/src/javascripts/ng-admin/Main/view/layout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3270142">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.29097962">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
