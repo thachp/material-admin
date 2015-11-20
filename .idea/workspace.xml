@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7821728b-74b8-4520-ae48-e01cf1b7ffd6" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/blog/build/fakerest.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/blog/config.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/blog/data.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/blog/fakerest-init.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/blog/index.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javascripts/ng-admin/Main/view/layout.html" afterPath="$PROJECT_DIR$/src/javascripts/ng-admin/Main/view/layout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/ng-admin-only.min.js" afterPath="$PROJECT_DIR$/build/ng-admin-only.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/ng-admin-only.min.js.map" afterPath="$PROJECT_DIR$/build/ng-admin-only.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/ng-admin.min.css" afterPath="$PROJECT_DIR$/build/ng-admin.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/ng-admin.min.js" afterPath="$PROJECT_DIR$/build/ng-admin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/ng-admin.min.js.map" afterPath="$PROJECT_DIR$/build/ng-admin.min.js.map" />
     </list>
     <ignored path="ng-admin.iws" />
     <ignored path=".idea/workspace.xml" />
